@@ -1,0 +1,13 @@
+image: lstephen/docker:latest
+privileged: true
+
+environment:
+  - DOCKERHUB_USERNAME
+  - DOCKERHUB_PASSWORD
+
+targets:
+  build: docker build 2.4/
+
+  publish: /bin/bash construi/publish/run.sh
+
+
