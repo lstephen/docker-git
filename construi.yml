@@ -11,6 +11,7 @@ targets:
   build: docker build 2.4/
 
   release:
+    build: 2.4/
     files:
       - $GIT_SSH_KEY:/root/.ssh/id_rsa:0600
     run: /bin/bash construi/release/run.sh
