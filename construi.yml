@@ -4,9 +4,16 @@ privileged: true
 environment:
   - DOCKERHUB_USERNAME
   - DOCKERHUB_PASSWORD
+  - GIT_AUTHOR_NAME
+  - GIT_AUTHOR_EMAIL
 
 targets:
   build: docker build 2.4/
+
+  release:
+    files:
+      - $GIT_SSH_KEY:/root/.ssh/id_rsa:0600
+    run: /bin/bash construi/release/run.sh
 
   publish: /bin/bash construi/publish/run.sh
 
