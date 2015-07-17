@@ -3,7 +3,7 @@ MAINTAINER Levi Stephen <levi.stephen@gmail.com>
 
 RUN apt-get update \
  && apt-get install -y \
-     curl unzip make gcc autoconf \
+     curl unzip make gcc autoconf ssh \
  && apt-get install -y \
      libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
 
