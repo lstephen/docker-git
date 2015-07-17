@@ -23,3 +23,5 @@ RUN make configure \
  && make all \
  && make install
 
+RUN rm -rf $GIT_SRC_DIR
+
