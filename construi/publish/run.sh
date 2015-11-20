@@ -2,8 +2,8 @@
 
 set -e
 
+$VERSION_2_4=2.4.5
 $VERSION_LATEST=$VERSION_2_4
-$VERSOIN_2_4=2.4.5
 
 docker build --tag lstephen/git:$VERSION_2_4 2.4/
 docker tag lstephen/git:$VERSION_2_4 lstephen/git:2.4
